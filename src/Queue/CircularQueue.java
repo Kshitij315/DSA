@@ -15,6 +15,7 @@ public class CircularQueue {
     void enqueue(int e) {
         //q[++rear]=e;
         rear = (rear + 1) % maxsize;
+        count++;//changes
         q[rear] = e;
     }
 
@@ -28,6 +29,7 @@ public class CircularQueue {
     int dequeue() {
         int temp = q[front];
         front = (front + 1) % maxsize;
+        count--;
         return temp;
     }
 
