@@ -14,7 +14,7 @@ public class Stack_Example_1 {
 
         do{
             //menu
-            System.out.println("\n1.Push\n2.Pop\n3.Peek\n4.Peek\n0.Exit\n");
+            System.out.println("\n1.Push\n2.Pop\n3.Peek\n4.Print\n0.Exit\n");
              option=sc.nextInt();
             switch (option)
             {
@@ -31,7 +31,7 @@ public class Stack_Example_1 {
                 case 2:
                     if(stk.is_empty()!=true)
                     {
-                        System.out.println("Element popped is"+stk.pop());
+                        System.out.println("Element popped is "+stk.pop());
                     }
                     else
                         System.out.println("Stack is Empty");
@@ -39,7 +39,7 @@ public class Stack_Example_1 {
                 case 3:
                     if(stk.is_empty()!=true)
                     {
-                        System.out.println("Element @peek is"+stk.peek());
+                        System.out.println("Element @peek is: "+stk.peek());
                     }
                     else
                         System.out.println("Stack is Empty");
