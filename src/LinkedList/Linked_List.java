@@ -132,5 +132,37 @@ public class Linked_List {
         }
     }
     }
+
+    void insert_at(int index,int e) {
+        Node n = new Node(e);//created
+        if (index == 0)//start
+        {
+            if (root == null)//not there then n is root
+                root = n;
+            else //root already exists
+            {
+                n.next = root;
+                root = n;
+            }
+        } else//see if index exists
+        {
+            Node t = root;
+            Node t2 = t;
+            while (index > 0 && t != null) {
+                t2 = t;
+                t = t.next;
+                index--;
+            }
+            if (t == null)//if index out of bound
+            {
+                System.out.println("Index Out Of Bound");
+            } else//found and to insert
+            {
+                t2.next = n;
+                n.next = t;
+                System.out.println(e + " inserted");
+            }
+        }
+    }
 }
 
