@@ -1,10 +1,10 @@
 package LinkedList;
 
-import java.util.LinkedList;
+//import java.util.LinkedList;
 import java.util.Scanner;
 
 public class LinkedList_Main {
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         int ch,e;
         Scanner in = new Scanner(System.in);
@@ -42,12 +42,14 @@ public class LinkedList_Main {
                     System.out.println("enter element");
                     e=in.nextInt();
                     obj.delete(e);
+                    break;
                 case 8:
                     System.out.println("enter index" );
                     int index=in.nextInt();
                     System.out.println("Enter element to be inserted: ");
                     e=in.nextInt();
                     obj.insert_at(index,e);
+                    break;
                 case 0:
                     System.out.println("Exiting.....");
                     break;
