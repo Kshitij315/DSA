@@ -101,5 +101,36 @@ public class Linked_List {
         }
 
     }
+
+    void delete(int key)
+    {
+        if(root==null)
+        System.out.println("Empty list");
+    else//list exists
+    {
+        Node t=root;//1
+        Node t2=t;//1
+        while(t!=null)
+        {
+            if(t.data==key)
+                break;
+            t2=t;
+            t=t.next;
+        }
+        if(t==null)
+            System.out.println(key+" Not Found");
+        else//if found which case
+        {
+            System.out.println(key + " Found");
+            if (t == root)//case 1
+                root = root.next;
+            else if (t.next == null)//case 2
+                t2.next = null;
+            else
+                t2.next = t.next;
+            System.out.println(t.data + " deleted");
+        }
+    }
+    }
 }
 
