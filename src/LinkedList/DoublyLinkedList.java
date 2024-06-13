@@ -104,7 +104,15 @@ public class DoublyLinkedList {
     void print_list_rev() {
         if (root == null)
             System.out.println("Empty list");
-
+        else
+        {
+            DNode t=root;//1
+            while(t!=null)
+            {
+                System.out.print("<-|"+t.data+"|->");
+                t=t.right;
+            }
+        }
 
     }
     public static void main(String args[]) {
