@@ -55,36 +55,37 @@ static void mergesort(int a[],int start,int end)
         merger(a,start,mid,end);
     }
 }
-static void quick_sort(int a[],int start,int end)
-{
-    int i=start;
-    int j=end;
-    int pivot=start;
-    while (i<j)//stop on merge {
-        while(a[ i ]<a[ pivot])
-            i++;
-    while(a[ j ]>a[ pivot ])
-        j--;
-    if( i < j )
+static void quick_sort(int a[],int start,int end) {
+    int i = start;
+    int j = end;
+    int pivot = start;
+    while (i < j)//stop on merge
     {
-        int temp=a[i];
-        a[i]=a[j];
-        a[j]=temp;
+        while (a[i] < a[pivot])
+            i++;
+        while (a[j] > a[pivot])
+            j--;
+        if (i < j) {
+            int temp = a[i];
+            a[i] = a[j];
+            a[j] = temp;
+        }
     }
 
-    if( i <end)
-        quick_sort(a,i+1,end);
-    if( j > start)
-            quick_sort(a,start,j-1);
+    if (i < end)
+        quick_sort(a, i + 1, end);
+    if (j > start)
+        quick_sort(a, start, j - 1);
 }
 
 
 public static void main(String args[])
     {
         int a[]={55,11,88,22,44,77,33,99,66};
-        System.out.println("Start:");
+//        System.out.println("Start:");
         SortingExamples.print_array(a);
-//Sorting.bubble_sort(a); //Sorting.mergesort(a,0,a.length-1); Sorting.quick_sort(a,0,a.length-1);
+//Sorting.bubble_sort(a); //Sorting.mergesort(a,0,a.length-1);
+        SortingExamples.quick_sort(a,0,a.length-1);
         System.out.println("\nSorted:");
         SortingExamples.print_array(a);
 
