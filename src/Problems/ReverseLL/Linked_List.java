@@ -1,8 +1,7 @@
-package LinkedList;
+package Problems.ReverseLL;
 
-import Problems.ReverseLL.Node2;
-
-public class Linked_List {
+public class
+Linked_List {
 
 
     Node2 root;
